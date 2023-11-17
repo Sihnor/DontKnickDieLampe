@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -49,7 +47,7 @@ public class sonar : MonoBehaviour
     {
         // Implement the logic to handle the detected object
         // For example, you can trigger an outline effect on the detected object
-        detectedObject.GetComponent<CastOutline>().ToggleOutline();
+        detectedObject.GetComponent<Outline>().enabled = true;
     }
 
     public void CastSonar(InputAction.CallbackContext ctx)
