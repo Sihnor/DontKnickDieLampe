@@ -12,14 +12,20 @@ public class LightBehaviour : MonoBehaviour
     public float ranRed;
 
     public float lightDiminish = 0.1f;
+    public float emissionIntensity = 1f;
 
     public Light point;
-
+    public Color temp;
     public Material lightMat;
 
     private void Start()
     {
         point = GetComponent<Light>();
+        Renderer renderer = GetComponent<Renderer>();
+        if(renderer != null)
+        {
+            lightMat = renderer.material;
+        }
     }
 
     private void Update()
@@ -28,6 +34,7 @@ public class LightBehaviour : MonoBehaviour
         {
             activeTimer -= Time.deltaTime;
             point.intensity -= lightDiminish * Time.deltaTime;
+            StartCoroutine(DecreaseEmissionOverTime(activeTimer, lightDiminish));
 
             if (activeTimer <= 0)
             {
@@ -54,7 +61,37 @@ public class LightBehaviour : MonoBehaviour
         ranGreen = Random.Range(0.5f,1f);
         ranBlue = Random.Range(0.5f, 1f);
         ranRed = Random.Range(0.5f, 1f);
-        lightMat.color = new Color(ranRed, ranGreen, ranBlue);
+        temp = new Color(ranRed, ranGreen, ranBlue);
+        SetEmission(temp * emissionIntensity);
         point.color = new Color(ranRed, ranGreen, ranBlue);
+    }
+
+    void SetEmission(Color color)
+    {
+        lightMat.EnableKeyword("_EMISSION");
+
+        lightMat.SetColor("_EmissionColor", color);
+    }
+
+    IEnumerator DecreaseEmissionOverTime(float duration, float decreaseRate)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            emissionIntensity -= decreaseRate;
+            if (emissionIntensity < 0f)
+            {
+                emissionIntensity = 0f;
+            }
+
+            SetEmission(temp * emissionIntensity);
+
+            elapsedTime += 1f; // Decrease by 1 second
+            yield return new WaitForSeconds(1f); // Wait for 1 second
+        }
+
+        // Ensure emission is completely off at the end
+        SetEmission(Color.black);
     }
 }
