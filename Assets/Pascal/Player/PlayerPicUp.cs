@@ -55,6 +55,10 @@ public class PlayerPicUp : MonoBehaviour
                 hit.collider.gameObject.SetActive(false);
                 return;
             }
+            else
+            {
+                Debug.Log("Haha you missed the Item");
+            }
         }
     }
 }
