@@ -17,6 +17,12 @@ public class PointOfEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (!GameManager.Instance.lightingOn)
+        {
+            return;
+        }
+
         float startOfView = this.FieldOfViewDegree / -2;
 
         Vector3 currentPosition = this.transform.position;
@@ -33,10 +39,10 @@ public class PointOfEnemy : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(currentPosition, temp, out hit, this.DistanceOfSight))
                 {
-                    if (hit.collider.gameObject.CompareTag("PlayerTag"))
+                    if (hit.collider.gameObject.CompareTag("Player"))
                     {
                         Debug.DrawLine(currentPosition, currentPosition + (temp * hit.distance), Color.red);
-
+                        GameManager.Instance.PlayerIsChased = true;
                         EnemyMovement.SetState(EEnemyState.Chasing);
                         return;
                     }
@@ -45,5 +51,6 @@ public class PointOfEnemy : MonoBehaviour
             }
         }
         this.EnemyMovement.SetState(EEnemyState.Idle);
+        GameManager.Instance.PlayerIsChased = false;
     }
 }
