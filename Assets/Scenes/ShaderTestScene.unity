@@ -541,15 +541,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 365185858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03bfc4d45aa2b7c4da56550fb8f109ae, type: 3}
+  m_Script: {fileID: 11500000, guid: f6059525959c84f4eadfc663f8d437e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonarSpeed: 100
-  sonarRadius: 20
+  sonarSpeed: 5
+  sonarRadius: 5
   canSonar: 0
   detectionLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
 --- !u!1 &415124462
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 596809734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f95cf1532932c4484e245577510a83, type: 3}
+  m_Script: {fileID: 11500000, guid: 38edd00269fff884c876a32a599355d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visibilityTimer: 5
@@ -789,7 +789,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f1a9b29ed5fd424e8fc70191d553de1, type: 2}
+  - {fileID: 2100000, guid: db0f4f77889f3ac4481bbb6e11e5d40a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 659094178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f95cf1532932c4484e245577510a83, type: 3}
+  m_Script: {fileID: 11500000, guid: 38edd00269fff884c876a32a599355d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visibilityTimer: 5
@@ -953,7 +953,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f1a9b29ed5fd424e8fc70191d553de1, type: 2}
+  - {fileID: 2100000, guid: db0f4f77889f3ac4481bbb6e11e5d40a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1196,7 +1196,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f1a9b29ed5fd424e8fc70191d553de1, type: 2}
+  - {fileID: 2100000, guid: db0f4f77889f3ac4481bbb6e11e5d40a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1170741555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f95cf1532932c4484e245577510a83, type: 3}
+  m_Script: {fileID: 11500000, guid: 38edd00269fff884c876a32a599355d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visibilityTimer: 5
@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1263219535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae2b9eb501acd94ab72e6616b54f28a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3cc7da759884947bcf9fd432821706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   activeTimer: 10
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1495488846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f95cf1532932c4484e245577510a83, type: 3}
+  m_Script: {fileID: 11500000, guid: 38edd00269fff884c876a32a599355d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visibilityTimer: 5
@@ -1770,7 +1770,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0f1a9b29ed5fd424e8fc70191d553de1, type: 2}
+  - {fileID: 2100000, guid: db0f4f77889f3ac4481bbb6e11e5d40a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1841,15 +1841,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1513669468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03bfc4d45aa2b7c4da56550fb8f109ae, type: 3}
+  m_Script: {fileID: 11500000, guid: f6059525959c84f4eadfc663f8d437e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonarSpeed: 100
-  sonarRadius: 20
+  sonarSpeed: 5
+  sonarRadius: 5
   canSonar: 0
   detectionLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
 --- !u!1 &1663969521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,15 +2036,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2015275179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03bfc4d45aa2b7c4da56550fb8f109ae, type: 3}
+  m_Script: {fileID: 11500000, guid: f6059525959c84f4eadfc663f8d437e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonarSpeed: 100
-  sonarRadius: 20
+  sonarSpeed: 5
+  sonarRadius: 5
   canSonar: 0
   detectionLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
