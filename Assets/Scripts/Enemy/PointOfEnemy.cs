@@ -17,6 +17,12 @@ public class PointOfEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (!GameManager.Instance.lightingOn)
+        {
+            return;
+        }
+
         float startOfView = this.FieldOfViewDegree / -2;
 
         Vector3 currentPosition = this.transform.position;
