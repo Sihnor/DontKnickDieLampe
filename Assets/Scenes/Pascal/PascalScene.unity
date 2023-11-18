@@ -7794,6 +7794,16 @@ PrefabInstance:
       propertyPath: infoText
       value: 
       objectReference: {fileID: 585362608}
+    - target: {fileID: 6293666636162836709, guid: 0a9575bd98b4cd84ab21340d968c4b0c,
+        type: 3}
+      propertyPath: lightDiminish
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821183739858779412, guid: 0a9575bd98b4cd84ab21340d968c4b0c,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8122889115157569434, guid: 0a9575bd98b4cd84ab21340d968c4b0c,
         type: 3}
       propertyPath: m_LocalPosition.x

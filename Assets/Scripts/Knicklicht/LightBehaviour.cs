@@ -11,6 +11,8 @@ public class LightBehaviour : MonoBehaviour
     public float ranBlue;
     public float ranRed;
 
+    public float lightDiminish = 0.1f;
+
     public Light point;
 
     public Material lightMat;
@@ -25,10 +27,12 @@ public class LightBehaviour : MonoBehaviour
         if (gameObject.activeSelf)
         {
             activeTimer -= Time.deltaTime;
+            point.intensity -= lightDiminish * Time.deltaTime;
 
             if (activeTimer <= 0)
             {
-                activeTimer = 5f;
+                activeTimer = 10f;
+                point.intensity = 1;
                 gameObject.SetActive(false);
                 GameManager.Instance.lightingOn = false;
             }
@@ -37,7 +41,7 @@ public class LightBehaviour : MonoBehaviour
 
     public void OnKnickLicht(InputAction.CallbackContext ctx)
     {
-        if(ctx.started)
+        if(ctx.started && !gameObject.activeSelf)
         {
             gameObject.SetActive(true);
             GameManager.Instance.lightingOn = true;
