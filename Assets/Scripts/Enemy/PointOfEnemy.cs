@@ -39,10 +39,10 @@ public class PointOfEnemy : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(currentPosition, temp, out hit, this.DistanceOfSight))
                 {
-                    if (hit.collider.gameObject.CompareTag("PlayerTag"))
+                    if (hit.collider.gameObject.CompareTag("Player"))
                     {
                         Debug.DrawLine(currentPosition, currentPosition + (temp * hit.distance), Color.red);
-
+                        GameManager.Instance.PlayerIsChased = true;
                         EnemyMovement.SetState(EEnemyState.Chasing);
                         return;
                     }
@@ -51,5 +51,6 @@ public class PointOfEnemy : MonoBehaviour
             }
         }
         this.EnemyMovement.SetState(EEnemyState.Idle);
+        GameManager.Instance.PlayerIsChased = false;
     }
 }

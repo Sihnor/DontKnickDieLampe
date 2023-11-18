@@ -6,6 +6,10 @@ TagManager:
   tags:
   - PlayerTag
   - RedKey
+  - EscapeDoor
+  - BlueKey
+  - GreenKey
+  - TutKey
   layers:
   - Default
   - TransparentFX

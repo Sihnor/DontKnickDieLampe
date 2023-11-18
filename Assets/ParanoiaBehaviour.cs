@@ -47,7 +47,7 @@ public class ParanoiaBehaviour : MonoBehaviour
 
         this.CurrentParanoiaTick = 0;
         
-        if (this.CurrentParanoiaLevel > this.MaxParanoiaLevel)
+        if (this.CurrentParanoiaLevel >= this.MaxParanoiaLevel)
         {
             return;
         }
