@@ -9,12 +9,13 @@ public class PlayerController : MonoBehaviour
     GameObject cam;
     Rigidbody rb;
 
-    [SerializeField] float sprintSpeedToAdd = 10;
-    [SerializeField] float speed = 20;
-    [SerializeField] float sprintTime = 20;
+    [SerializeField] float sprintSpeedToAdd = 5;
+    [SerializeField] float speed = 10;
+
+    [SerializeField] float sprintTime = 10;
+    [SerializeField] float sprintTimeIncrease = 1;
+    [SerializeField] float sprintTimeDecrease = 2;
     float curSprintTime;
-    [SerializeField] float sprintCooldown = 20;
-    float curSprintCooldown;
     bool onCooldown = false;
 
     [SerializeField] float sensiX = 0.1f;
@@ -30,29 +31,28 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        //sensiX = GameManager.Instance.xSensitivity;
+        //sensiY = GameManager.Instance.ySensitivity;
         rb = GetComponent<Rigidbody>();
         cam = gameObject.transform.GetChild(0).gameObject;
     }
 
     void Update()
     {
-        if (curSprintTime < sprintTime && !onCooldown)
+        if (curSprintTime < sprintTime && sprintInput == 1 && !onCooldown)
         {
-            curSprintTime += 1 * Time.deltaTime;
+            curSprintTime += sprintTimeIncrease * Time.deltaTime;
         }
-        if (curSprintTime > sprintTime)
+        else
         {
-            curSprintTime = 0;
             onCooldown = true;
+            sprintInput = 0;
+            curSprintTime -= sprintTimeDecrease * Time.deltaTime;
         }
 
-        if (curSprintCooldown > 0 && onCooldown)
+        if(curSprintTime < 0)
         {
-            curSprintCooldown -= 1 * Time.deltaTime;
-        }
-        if (curSprintCooldown < 0)
-        {
-            curSprintCooldown = sprintCooldown;
+            curSprintTime = 0;
             onCooldown = false;
         }
         direction = moveInput.x * transform.right + moveInput.y * transform.forward;
