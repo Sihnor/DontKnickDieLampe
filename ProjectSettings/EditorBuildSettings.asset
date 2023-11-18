@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Pascal/PascalScene.unity
     guid: f416d6aff9d3c25469b27b30e2c46c22
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: b77f084b1878fb54e9e75d755e833b49,
+    com.unity.input.settings: {fileID: 11400000, guid: 9df1109068821b64d81e43bda18a009b,
       type: 2}

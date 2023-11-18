@@ -30,6 +30,7 @@ public class LightBehaviour : MonoBehaviour
             {
                 activeTimer = 5f;
                 gameObject.SetActive(false);
+                GameManager.Instance.lightingOn = false;
             }
         }
     }
@@ -39,6 +40,7 @@ public class LightBehaviour : MonoBehaviour
         if(ctx.started)
         {
             gameObject.SetActive(true);
+            GameManager.Instance.lightingOn = true;
             RandomColor();
         }
     }
