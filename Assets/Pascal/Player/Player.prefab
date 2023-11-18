@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8521069221276451710}
   - component: {fileID: 4284476922874290907}
   - component: {fileID: 6749909096884449079}
-  - component: {fileID: 3941524860063278797}
+  - component: {fileID: 2632682136891545920}
+  - component: {fileID: 7379292625336282304}
   - component: {fileID: 1952095941221394600}
   m_Layer: 0
   m_Name: Player
@@ -138,7 +139,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &3941524860063278797
+--- !u!114 &2632682136891545920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3001749202884800899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf3c884d9d3fb274bb80141ccc11023d, type: 3}
+  m_Script: {fileID: 11500000, guid: 27ea57138dcbd254c94a1c1b58ecefa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprintSpeedToAdd: 5
@@ -158,6 +159,24 @@ MonoBehaviour:
   sensiX: 0.1
   sensiY: 0.1
   clampValue: 225
+--- !u!114 &7379292625336282304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3001749202884800899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3d9284cb7ad8a498d576a141d11fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 6465200281814582162}
+  rayLeangth: 2
+  keyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  infoText: {fileID: 0}
 --- !u!114 &1952095941221394600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: cf671b2375a5bd44c85429a02a2e565f,
+  m_Actions: {fileID: -944628639613478452, guid: 6340bef3339b561439210f24ad44ebba,
     type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
@@ -186,7 +205,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3941524860063278797}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnSprintInput
         m_Mode: 0
@@ -202,7 +221,7 @@ MonoBehaviour:
     m_ActionName: Stuff/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3941524860063278797}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMoveInput
         m_Mode: 0
@@ -218,7 +237,7 @@ MonoBehaviour:
     m_ActionName: Stuff/WASD[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3941524860063278797}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMouseInput
         m_Mode: 0
@@ -232,6 +251,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0a1ce1d0-ff55-41ae-9deb-07b9abaa9e9e
     m_ActionName: Stuff/Mouse[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9d26c225-279f-4354-aebc-6a329778e4c0
+    m_ActionName: Stuff/use sonar[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 93e5c1f1-c754-49a7-bc39-77e0a076cebf
+    m_ActionName: Stuff/use light[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Stuff
