@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     public float xSensitivity;
     public float ySensitivity;
 
+    public bool pickedUpTutKey = false;
+    public bool pickedUpRedKey = false;
+    public bool pickedUpGreenKey = false;
+    public bool pickedUpBlueKey = false;
+
     private void Awake()
     {
         if (Instance != null)
