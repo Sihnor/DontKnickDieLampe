@@ -544,8 +544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6059525959c84f4eadfc663f8d437e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonarSpeed: 5
-  sonarRadius: 5
+  sonarSpeed: 100
+  sonarRadius: 20
   canSonar: 0
   detectionLayer:
     serializedVersion: 2
@@ -1844,8 +1844,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6059525959c84f4eadfc663f8d437e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonarSpeed: 5
-  sonarRadius: 5
+  sonarSpeed: 100
+  sonarRadius: 20
   canSonar: 0
   detectionLayer:
     serializedVersion: 2
@@ -2039,8 +2039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6059525959c84f4eadfc663f8d437e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonarSpeed: 5
-  sonarRadius: 5
+  sonarSpeed: 100
+  sonarRadius: 20
   canSonar: 0
   detectionLayer:
     serializedVersion: 2
