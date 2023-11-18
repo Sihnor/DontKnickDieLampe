@@ -13,7 +13,7 @@ public class LightBehaviour : MonoBehaviour
 
     public Light point;
 
-    //public Material lightMat;
+    public Material lightMat;
 
     private void Start()
     {
@@ -48,8 +48,7 @@ public class LightBehaviour : MonoBehaviour
         ranGreen = Random.Range(0.5f,1f);
         ranBlue = Random.Range(0.5f, 1f);
         ranRed = Random.Range(0.5f, 1f);
-        //lightMat.color = new Color(ranRed, ranGreen, ranBlue);
-        //point.color = lightMat.color;
-        point.color = new Color(ranRed, ranGreen, ranBlue);
+        lightMat.color = new Color(ranRed, ranGreen, ranBlue);
+        point.color = lightMat.color;
     }
 }
