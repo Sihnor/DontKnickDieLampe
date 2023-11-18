@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF Material
-  m_Shader: {fileID: 4800000, guid: 60208f4df394822469f224dd5a7b9957, type: 3}
+  m_Shader: {fileID: 4800000, guid: 62f62a258c185b242b2b2caf7f734b79, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -91,6 +91,7 @@ Material:
     - _DiffusePower: 1
     - _DstBlend: 0
     - _FaceDilate: 0
+    - _FaceShininess: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
     - _GlossMapScale: 1
@@ -107,6 +108,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _OutlineShininess: 0
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
@@ -155,6 +157,7 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_BuildTextureStacks: []

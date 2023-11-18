@@ -49,6 +49,6 @@ public class LightBehaviour : MonoBehaviour
         ranBlue = Random.Range(0.5f, 1f);
         ranRed = Random.Range(0.5f, 1f);
         lightMat.color = new Color(ranRed, ranGreen, ranBlue);
-        point.color = lightMat.color;
+        point.color = new Color(ranRed, ranGreen, ranBlue);
     }
 }

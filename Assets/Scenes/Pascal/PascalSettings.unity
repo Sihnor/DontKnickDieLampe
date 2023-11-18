@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 80775166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3ee4d611cd9ea641af3e303e101ea79, type: 3}
+  m_Script: {fileID: 11500000, guid: b35addedf8c48f948922eeea2dc45d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &80775168
@@ -228,8 +228,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'X:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 405241762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b45296ce2b31cd44ba52b45eab2cd84, type: 3}
+  m_Script: {fileID: 11500000, guid: fc54acdd852e68d459ae8f25bc5d4f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sliderObj: {fileID: 1621361499}
@@ -360,10 +360,10 @@ MonoBehaviour:
       - m_Target: {fileID: 80775167}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: SetYSlider
-        m_Mode: 2
+        m_Mode: 0
         m_Arguments:
-          m_ObjectArgument: {fileID: 1621361501}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -391,8 +391,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -885,8 +885,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Y:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1019,8 +1019,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1153,8 +1153,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SETTINGS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 923093953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b45296ce2b31cd44ba52b45eab2cd84, type: 3}
+  m_Script: {fileID: 11500000, guid: fc54acdd852e68d459ae8f25bc5d4f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sliderObj: {fileID: 514839079}
@@ -1285,10 +1285,10 @@ MonoBehaviour:
       - m_Target: {fileID: 80775167}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: SetXSlider
-        m_Mode: 2
+        m_Mode: 0
         m_Arguments:
-          m_ObjectArgument: {fileID: 514839081}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1316,8 +1316,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1924,8 +1924,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sensitivity
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 9fece5025951ffe43a273e1854edf639, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 74ee85aad36e5914f859991671214a3d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
