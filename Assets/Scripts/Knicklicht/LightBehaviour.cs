@@ -7,6 +7,19 @@ public class LightBehaviour : MonoBehaviour
 {
     public float activeTimer = 10f;
 
+    public float ranGreen;
+    public float ranBlue;
+    public float ranRed;
+
+    public Light point;
+
+    public Material lightMat;
+
+    private void Start()
+    {
+        point = GetComponent<Light>();
+    }
+
     private void Update()
     {
         if (gameObject.activeSelf)
@@ -26,6 +39,16 @@ public class LightBehaviour : MonoBehaviour
         if(ctx.started)
         {
             gameObject.SetActive(true);
+            RandomColor();
         }
+    }
+
+    private void RandomColor()
+    {
+        ranGreen = Random.Range(0.5f,1f);
+        ranBlue = Random.Range(0.5f, 1f);
+        ranRed = Random.Range(0.5f, 1f);
+        lightMat.color = new Color(ranRed, ranGreen, ranBlue);
+        point.color = lightMat.color;
     }
 }

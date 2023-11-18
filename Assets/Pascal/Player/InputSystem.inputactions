@@ -1,5 +1,5 @@
 {
-    "name": "Input",
+    "name": "InputSystem",
     "maps": [
         {
             "name": "Stuff",
@@ -31,6 +31,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "use sonar",
+                    "type": "Button",
+                    "id": "9d26c225-279f-4354-aebc-6a329778e4c0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "use light",
+                    "type": "Button",
+                    "id": "93e5c1f1-c754-49a7-bc39-77e0a076cebf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -108,6 +126,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27e2aced-5b64-4c08-869d-04c7edfbc5fb",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "use sonar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73ac95c4-5472-4e66-abf2-e2a0ea9dff66",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "use light",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
