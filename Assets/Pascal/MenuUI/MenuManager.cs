@@ -41,21 +41,21 @@ public class MenuManager : MonoBehaviour
 
     public void SetXSlider(Slider _slider)
     {
-        //_slider.value = GameManager.Instance.xSensitivity;
+        _slider.value = GameManager.Instance.xSensitivity;
     }
 
     public void SetYSlider(Slider _slider)
     {
-        //_slider.value = GameManager.Instance.ySensitivity;
+        _slider.value = GameManager.Instance.ySensitivity;
     }
 
     public void OnXSliderChange(float _value)
     {
-        //GameManager.Instance.xSensitivity = _value;
+        GameManager.Instance.xSensitivity = _value;
     }
     public void OnYSliderChange(float _value)
     {
-        //GameManager.Instance.ySensitivity = _value;
+        GameManager.Instance.ySensitivity = _value;
     }
     #endregion
 }

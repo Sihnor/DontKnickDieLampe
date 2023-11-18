@@ -31,8 +31,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        //sensiX = GameManager.Instance.xSensitivity;
-        //sensiY = GameManager.Instance.ySensitivity;
+        sensiX = GameManager.Instance.xSensitivity;
+        sensiY = GameManager.Instance.ySensitivity;
         rb = GetComponent<Rigidbody>();
         cam = gameObject.transform.GetChild(0).gameObject;
     }
