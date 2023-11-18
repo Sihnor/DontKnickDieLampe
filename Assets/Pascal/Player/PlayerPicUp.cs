@@ -18,8 +18,9 @@ public class PlayerPicUp : MonoBehaviour
 
     void Update()
     {
-        Physics.Raycast(cam.transform.position, cam.transform.rotation.eulerAngles, out hit, rayLeangth, keyLayer);
-        if(hit.collider.gameObject != null)
+        Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, rayLeangth, keyLayer);
+        Debug.DrawLine(cam.transform.position, hit.point, Color.black);
+        if (hit.collider && GameManager.Instance.lightingOn)
         {
             infoText.gameObject.SetActive(true);
         }
@@ -28,29 +29,32 @@ public class PlayerPicUp : MonoBehaviour
             infoText.gameObject.SetActive(false);
         }
 
-        if (Input.GetButtonDown(KeyCode.Mouse0.ToString()))
+        if (Input.GetMouseButtonDown(0))
         {
-            switch (hit.collider.gameObject.tag)
+            if (hit.collider.CompareTag("RedKey"))
             {
-                case "RedKey":
-                    {
-                        GameManager.Instance.pickedUpRedKey = true;
-                        return;
-                    }
-
-                case "GreenKey":
-                    {
-                        GameManager.Instance.pickedUpGreenKey = true;
-                        return;
-                    }
-
-                case "BlueKey":
-                    {
-                        GameManager.Instance.pickedUpBlueKey = true;
-                        return;
-                    }
+                GameManager.Instance.pickedUpRedKey = true;
+                hit.collider.gameObject.SetActive(false);
+                return;
             }
-            Destroy(hit.collider.gameObject);
+            else if (hit.collider.CompareTag("GreenKey"))
+            {
+                GameManager.Instance.pickedUpGreenKey = true;
+                hit.collider.gameObject.SetActive(false);
+                return;
+            }
+            else if (hit.collider.CompareTag("BlueKey"))
+            {
+                GameManager.Instance.pickedUpBlueKey = true;
+                hit.collider.gameObject.SetActive(false);
+                return;
+            }
+            else if (hit.collider.CompareTag("TutKey"))
+            {
+                GameManager.Instance.pickedUpTutKey = true;
+                hit.collider.gameObject.SetActive(false);
+                return;
+            }
         }
     }
 }
