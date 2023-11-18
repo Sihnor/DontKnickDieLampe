@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Pascal/PascalMenu.unity
+    guid: 4ebd2da613e9df248b2235b47ed6e970
+  - enabled: 1
+    path: Assets/Scenes/Pascal/PascalSettings.unity
+    guid: 73b1f399fc7e96e459c6ac757d5c60c8
+  - enabled: 1
+    path: Assets/Scenes/Pascal/PascalScene.unity
+    guid: f416d6aff9d3c25469b27b30e2c46c22
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b77f084b1878fb54e9e75d755e833b49,
       type: 2}

@@ -147,13 +147,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3001749202884800899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b593e00dc1fdf43b4f9f3f9aba24e7, type: 3}
+  m_Script: {fileID: 11500000, guid: bf3c884d9d3fb274bb80141ccc11023d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprintSpeedToAdd: 5
   speed: 10
-  sensiX: 0.2
-  sensiY: 0.2
+  sprintTime: 10
+  sprintTimeIncrease: 1
+  sprintTimeDecrease: 2
+  sensiX: 0.1
+  sensiY: 0.1
   clampValue: 225
 --- !u!114 &1952095941221394600
 MonoBehaviour:
@@ -167,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 61df25add2bde1d43a7bc5add0184995,
+  m_Actions: {fileID: -944628639613478452, guid: cf671b2375a5bd44c85429a02a2e565f,
     type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
