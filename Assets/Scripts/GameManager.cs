@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+
+
     public bool paused;
     public float xSensitivity;
     public float ySensitivity;
