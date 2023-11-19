@@ -10,6 +10,17 @@ public class PlayerPicUp : MonoBehaviour
     [SerializeField] LayerMask keyLayer;
     [SerializeField] TextMeshProUGUI infoText;
 
+    [SerializeField]
+    private SoundRequestCollection requests;
+    [SerializeField]
+    private AudioData RedKey;
+    [SerializeField]
+    private AudioData BlueKey;
+    [SerializeField]
+    private AudioData GreenKey;
+    [SerializeField]
+    private AudioData TutKey;
+
     RaycastHit hit;
     void Start()
     {
@@ -46,6 +57,7 @@ public class PlayerPicUp : MonoBehaviour
             if (hit.collider.CompareTag("RedKey"))
             {
                 GameManager.Instance.PickedUpRedKey = true;
+                requests.Add(SoundRequest.Request(true, RedKey));
                 hit.collider.gameObject.SetActive(false);
                 return;
             }
@@ -53,6 +65,7 @@ public class PlayerPicUp : MonoBehaviour
             if (hit.collider.CompareTag("GreenKey"))
             {
                 GameManager.Instance.PickedUpGreenKey = true;
+                requests.Add(SoundRequest.Request(true, GreenKey));
                 hit.collider.gameObject.SetActive(false);
                 return;
             }
@@ -60,6 +73,7 @@ public class PlayerPicUp : MonoBehaviour
             if (hit.collider.CompareTag("BlueKey"))
             {
                 GameManager.Instance.PickedUpBlueKey = true;
+                requests.Add(SoundRequest.Request(true, BlueKey));
                 hit.collider.gameObject.SetActive(false);
                 return;
             }
@@ -67,6 +81,7 @@ public class PlayerPicUp : MonoBehaviour
             if (hit.collider.CompareTag("TutKey"))
             {
                 GameManager.Instance.PickedUpTutKey = true;
+                requests.Add(SoundRequest.Request(true, TutKey));
                 hit.collider.gameObject.SetActive(false);
                 AnimationManager.Instance.StartUnlockAnimation();
                 return;

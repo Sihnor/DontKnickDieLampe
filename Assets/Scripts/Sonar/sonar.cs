@@ -1,8 +1,14 @@
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class sonar : MonoBehaviour
 {
+    [SerializeField]
+    private SoundRequestCollection requests;
+    [SerializeField]
+    private AudioData thanos;
+
     public float sonarSpeed = 5f;
     public float sonarRadius = 5f;
 
@@ -55,6 +61,7 @@ public class sonar : MonoBehaviour
         if(ctx.started)
         {
             canSonar = true;
+            requests.Add(SoundRequest.Request(true, thanos));
         }
         else if(ctx.canceled)
         {
