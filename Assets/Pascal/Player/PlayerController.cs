@@ -12,6 +12,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float sprintSpeedToAdd = 5;
     [SerializeField] float speed = 10;
 
+    [SerializeField]
+    private SoundRequestCollection requests;
+    [SerializeField]
+    private AudioData footStepsRight;
+    [SerializeField]
+    private AudioData footStepsLeft;
+
     [SerializeField] float sprintTime = 10;
     [SerializeField] float sprintTimeIncrease = 1;
     [SerializeField] float sprintTimeDecrease = 2;
@@ -55,6 +62,20 @@ public class PlayerController : MonoBehaviour
             curSprintTime = 0;
             onCooldown = false;
         }
+
+        if (moveInput.x != 0 || moveInput.y != 0)
+        {
+            if (Time.frameCount % 60 == 0)
+            {
+                requests.Add(SoundRequest.Request(footStepsRight));
+                
+            }
+            else if (Time.frameCount % 80 == 0)
+            {
+                requests.Add(SoundRequest.Request(footStepsLeft));
+            }
+        }
+
         direction = moveInput.x * transform.right + moveInput.y * transform.forward;
         rb.AddForce(direction * (speed + (sprintSpeedToAdd * sprintInput)) * Time.deltaTime * 100);
         transform.rotation = Quaternion.Euler(rotationVecPlayer * sensiX);
