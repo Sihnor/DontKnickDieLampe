@@ -18,9 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private SoundRequestCollection requests;
     [SerializeField]
-    private AudioData footStepsRight;
-    [SerializeField]
-    private AudioData footStepsLeft;
+    private AudioData footSteps;
 
     [SerializeField] float sprintTime = 10;
     [SerializeField] float sprintTimeIncrease = 1;
@@ -79,16 +77,11 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput.x != 0 || moveInput.y != 0)
         {
-            if (Time.frameCount % 60 == 0)
+            if (Time.frameCount % 90 == 0)
             {
-                requests.Add(SoundRequest.Request(footStepsRight));
-
+                requests.Add(SoundRequest.Request(true, footSteps));
             }
-            else if (Time.frameCount % 80 == 0)
-            {
-                requests.Add(SoundRequest.Request(footStepsLeft));
-            }
-            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + sinAmplitude * (Mathf.Sin(sinFrequenz * sinTime) + sinOffset) , cam.transform.position.z);
+            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + sinAmplitude * (Mathf.Sin(sinFrequenz * sinTime) + sinOffset), cam.transform.position.z);
             sinTime += 1f * Time.deltaTime;
         }
 
