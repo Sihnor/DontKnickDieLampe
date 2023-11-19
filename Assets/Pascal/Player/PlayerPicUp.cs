@@ -21,6 +21,11 @@ public class PlayerPicUp : MonoBehaviour
         Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, rayLeangth, keyLayer);
         Debug.DrawLine(cam.transform.position, hit.point, Color.black);
 
+        if (!GameManager.Instance)
+        {
+            return;
+        }
+        
         //Debug.Log(hit.colliderInstanceID);
         if (hit.collider && GameManager.Instance.lightingOn)
         {
