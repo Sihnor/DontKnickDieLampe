@@ -81,11 +81,8 @@ public class PlayerController : MonoBehaviour
             {
                 requests.Add(SoundRequest.Request(true, footSteps));
             }
-<<<<<<< HEAD
-=======
             cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + sinAmplitude * (Mathf.Sin(sinFrequenz * sinTime) + sinOffset), cam.transform.position.z);
             sinTime += 1f * Time.deltaTime;
->>>>>>> dev/Pascal
         }
 
         direction = moveInput.x * transform.right + moveInput.y * transform.forward;

@@ -12,7 +12,7 @@ public class MonsterAudioRequester : MonoBehaviour
 
     private void Update()
     {
-        if (Time.frameCount % 720 == 0)
+        if (Time.frameCount % 1200 == 0)
         {
             requests.Add(SoundRequest.Request(false, monsterSounds));
         }
