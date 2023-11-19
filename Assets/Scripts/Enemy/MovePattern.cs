@@ -12,6 +12,12 @@ public class MovePattern : MonoBehaviour
 {
     [SerializeField, Header("AI")] public Transform[] MovePoints = new Transform[6];
     private NavMeshAgent Navigation;
+
+    [SerializeField]
+    private SoundRequestCollection requests;
+    [SerializeField]
+    private AudioData footSteps;
+
     private Int32 MovePointIndex = 0;
 
     // TODO muss noch angeaendert werden zu dem richtigen spieler
@@ -24,6 +30,17 @@ public class MovePattern : MonoBehaviour
     private void Start()
     {
         this.Navigation = GetComponent<NavMeshAgent>();
+    }
+
+    private void Update()
+    {
+        if(Navigation.velocity.sqrMagnitude > 0)
+        {
+            if (Time.frameCount % 180 == 0)
+            {
+                requests.Add(SoundRequest.Request(false, footSteps));
+            }
+        }
     }
 
     private void FixedUpdate()
