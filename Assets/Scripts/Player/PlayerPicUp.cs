@@ -22,6 +22,8 @@ public class PlayerPicUp : MonoBehaviour
     private AudioData TutKey;
 
     RaycastHit hit;
+
+    [SerializeField] DoorLogic TheDoorLogic;
     void Start()
     {
         infoText.gameObject.SetActive(false);
@@ -29,7 +31,7 @@ public class PlayerPicUp : MonoBehaviour
 
     void Update()
     {
-        Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, rayLeangth);
+        Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, rayLeangth); //, keyLayer);
         Debug.DrawLine(cam.transform.position, hit.point, Color.black);
 
         if (!GameManager.Instance)
@@ -101,6 +103,7 @@ public class PlayerPicUp : MonoBehaviour
                 {
                     Debug.Log("Die Tuer ist offen");
                     AnimationManager.Instance.StartExitAnimation();
+                    
                     return;
                 }
             }

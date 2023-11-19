@@ -32,7 +32,9 @@ public class GameManager : MonoBehaviour
     private bool pickedUpRedKey = false;
     public bool PickedUpRedKey{
         get { return pickedUpRedKey;}
-        set {
+        set
+        {
+            this.pickedUpRedKey = value;
             if (pickedUpTutKey && pickedUpGreenKey && pickedUpBlueKey)
             {
                 this.doorUnlocked = true;
@@ -42,7 +44,9 @@ public class GameManager : MonoBehaviour
     private bool pickedUpGreenKey = false;
     public bool PickedUpGreenKey{
         get { return pickedUpGreenKey;}
-        set {
+        set
+        {
+            this.pickedUpGreenKey = value;
             if (pickedUpTutKey && pickedUpRedKey && pickedUpBlueKey)
             {
                 this.doorUnlocked = true;
@@ -52,7 +56,9 @@ public class GameManager : MonoBehaviour
     private bool pickedUpBlueKey = false;
     public bool PickedUpBlueKey{
         get { return pickedUpBlueKey;}
-        set {
+        set
+        {
+            this.pickedUpBlueKey = value;
             if (pickedUpTutKey && pickedUpRedKey && pickedUpGreenKey)
             {
                 this.doorUnlocked = true;
