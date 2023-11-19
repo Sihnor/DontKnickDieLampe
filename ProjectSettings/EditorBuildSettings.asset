@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Pascal/PascalMenu.unity
-    guid: 4ebd2da613e9df248b2235b47ed6e970
+    path: Assets/Scenes/MainMenu.unity
+    guid: a2993dfb3195a9a4596fdffba7d6a9d5
   - enabled: 1
-    path: Assets/Scenes/Pascal/PascalSettings.unity
-    guid: 73b1f399fc7e96e459c6ac757d5c60c8
+    path: Assets/Scenes/SettingsMenu.unity
+    guid: b63343d5c5be24147a1937a36c0ebc0b
   - enabled: 1
-    path: Assets/Scenes/Pascal/PascalScene.unity
-    guid: f416d6aff9d3c25469b27b30e2c46c22
+    path: Assets/Scenes/MainPlay.unity
+    guid: c58b9047c7d18280196b8c80c53e4e5b
   - enabled: 1
-    path: Assets/Scenes/PascalDeath.unity
+    path: Assets/Scenes/DeathScreen.unity
     guid: 6b9742f2c31f0a2418cd9eade688efb8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9df1109068821b64d81e43bda18a009b,

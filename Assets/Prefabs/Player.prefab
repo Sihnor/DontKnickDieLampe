@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee056d02b4287144bf2bdbe12c846bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requests: {fileID: 0}
+  thanos: {fileID: 0}
   sonarSpeed: 10
   sonarRadius: 20
   canSonar: 0
@@ -253,7 +255,10 @@ MonoBehaviour:
   ranGreen: 0
   ranBlue: 0
   ranRed: 0
+  lightDiminish: 0.1
+  emissionIntensity: 1
   point: {fileID: 6821183739858779412}
+  temp: {r: 0, g: 0, b: 0, a: 0}
   lightMat: {fileID: -389402008792246631, guid: 8f8ecd1d533d6d24ca8a89ec2ac05b45,
     type: 3}
 --- !u!1 &6859569930480981952
@@ -300,6 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee056d02b4287144bf2bdbe12c846bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requests: {fileID: 0}
+  thanos: {fileID: 0}
   sonarSpeed: 10
   sonarRadius: 20
   canSonar: 0
@@ -350,6 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee056d02b4287144bf2bdbe12c846bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requests: {fileID: 0}
+  thanos: {fileID: 0}
   sonarSpeed: 10
   sonarRadius: 20
   canSonar: 0
@@ -514,12 +523,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprintSpeedToAdd: 5
   speed: 10
+  health: 3
+  requests: {fileID: 11400000, guid: 3eedd24e96da0414096363e02ede720a, type: 2}
+  footSteps: {fileID: 11400000, guid: ccff57886420e7640bce8939de0f5084, type: 2}
   sprintTime: 10
   sprintTimeIncrease: 1
   sprintTimeDecrease: 2
   sensiX: 0.1
   sensiY: 0.1
   clampValue: 225
+  sinTime: 0
+  sinOffset: -0.02
+  sinFrequenz: 5
+  sinAmplitude: 0.0005
 --- !u!114 &5595811979188424596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,11 +684,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 4060773743517476548}
-  rayLeangth: 10
+  rayLeangth: 100
   keyLayer:
     serializedVersion: 2
     m_Bits: 64
   infoText: {fileID: 0}
+  requests: {fileID: 11400000, guid: 3eedd24e96da0414096363e02ede720a, type: 2}
+  RedKey: {fileID: 11400000, guid: 4dd54a8285214574c936b54b78a0f122, type: 2}
+  BlueKey: {fileID: 11400000, guid: dd0bd06ed2516eb43a94070502b6c3bd, type: 2}
+  GreenKey: {fileID: 11400000, guid: 562680e61a7a6614da06434cbf06d5d3, type: 2}
+  TutKey: {fileID: 11400000, guid: db3172931a1c7d24b938fa286895220e, type: 2}
 --- !u!114 &-14878780111680007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +706,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c60bd69b19f49e8bcea277e5a53a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxParanoiaLevel: 10
+  MaxParanoiaTick: 10
+  MaxRehabTick: 3
+  CurrentParanoiaLevel: 0
 --- !u!1001 &7523369069888914350
 PrefabInstance:
   m_ObjectHideFlags: 0
