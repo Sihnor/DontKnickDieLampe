@@ -29,6 +29,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float sensiY = 0.1f;
     [SerializeField] int clampValue = 225;
 
+
+    [SerializeField] float sinTime = 0f;
+    [SerializeField] float sinOffset = 0.1f;
+    [SerializeField] float sinFrequenz = 0.1f;
+    [SerializeField] float sinAmplitude = 0.1f;
+
     Vector2 moveInput;
     Vector3 direction;
     Vector2 mouseInput;
@@ -57,7 +63,7 @@ public class PlayerController : MonoBehaviour
             curSprintTime -= sprintTimeDecrease * Time.deltaTime;
         }
 
-        if(curSprintTime < 0)
+        if (curSprintTime < 0)
         {
             curSprintTime = 0;
             onCooldown = false;
@@ -68,12 +74,14 @@ public class PlayerController : MonoBehaviour
             if (Time.frameCount % 60 == 0)
             {
                 requests.Add(SoundRequest.Request(footStepsRight));
-                
+
             }
             else if (Time.frameCount % 80 == 0)
             {
                 requests.Add(SoundRequest.Request(footStepsLeft));
             }
+            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + sinAmplitude * (Mathf.Sin(sinFrequenz * sinTime) + sinOffset) , cam.transform.position.z);
+            sinTime += 1f * Time.deltaTime;
         }
 
         direction = moveInput.x * transform.right + moveInput.y * transform.forward;
