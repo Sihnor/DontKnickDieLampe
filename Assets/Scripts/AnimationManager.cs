@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
@@ -13,6 +14,11 @@ public class AnimationManager : MonoBehaviour
     private bool IsPointOneReached = false;
     [SerializeField] private Transform PointTwo;
 
+    [SerializeField]
+    private SoundRequestCollection requests;
+    [SerializeField]
+    private AudioData lockAudio;
+
     private bool IsDoorOpen = false;
     private bool IsExitPlaying = false;
 
@@ -22,6 +28,7 @@ public class AnimationManager : MonoBehaviour
     public void StartUnlockAnimation()
     {
         this.TutLockAnimation.SetBool("PlayUnlockAnimation", true);
+        requests.Add(SoundRequest.Request(true, lockAudio));
         Invoke("DisableLock", 10f);
     }
 
