@@ -20,6 +20,8 @@ public class PlayerPicUp : MonoBehaviour
     {
         Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, rayLeangth, keyLayer);
         Debug.DrawLine(cam.transform.position, hit.point, Color.black);
+
+        //Debug.Log(hit.colliderInstanceID);
         if (hit.collider && GameManager.Instance.lightingOn)
         {
             infoText.gameObject.SetActive(true);
@@ -29,35 +31,48 @@ public class PlayerPicUp : MonoBehaviour
             infoText.gameObject.SetActive(false);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.lightingOn)
         {
+            if (hit.collider == null)
+            {
+                return;
+            }
+
             if (hit.collider.CompareTag("RedKey"))
             {
-                GameManager.Instance.pickedUpRedKey = true;
+                GameManager.Instance.PickedUpRedKey = true;
                 hit.collider.gameObject.SetActive(false);
                 return;
             }
-            else if (hit.collider.CompareTag("GreenKey"))
+
+            if (hit.collider.CompareTag("GreenKey"))
             {
-                GameManager.Instance.pickedUpGreenKey = true;
+                GameManager.Instance.PickedUpGreenKey = true;
                 hit.collider.gameObject.SetActive(false);
                 return;
             }
-            else if (hit.collider.CompareTag("BlueKey"))
+
+            if (hit.collider.CompareTag("BlueKey"))
             {
-                GameManager.Instance.pickedUpBlueKey = true;
+                GameManager.Instance.PickedUpBlueKey = true;
                 hit.collider.gameObject.SetActive(false);
                 return;
             }
-            else if (hit.collider.CompareTag("TutKey"))
+
+            if (hit.collider.CompareTag("TutKey"))
             {
-                GameManager.Instance.pickedUpTutKey = true;
+                GameManager.Instance.PickedUpTutKey = true;
                 hit.collider.gameObject.SetActive(false);
                 return;
             }
-            else
+            if (hit.collider.CompareTag("EscapeDoor"))
             {
-                Debug.Log("Haha you missed the Item");
+                if (GameManager.Instance.DoorUnlocked)
+                {
+                    Debug.Log("Die Tuer ist offen");
+                    //AnimationManager.Instance.PlayEndAnimation();
+                    return;
+                }
             }
         }
     }

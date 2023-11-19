@@ -12,10 +12,55 @@ public class GameManager : MonoBehaviour
 
     public bool lightingOn = false;
 
-    public bool pickedUpTutKey = false;
-    public bool pickedUpRedKey = false;
-    public bool pickedUpGreenKey = false;
-    public bool pickedUpBlueKey = false;
+    private bool playerIsChased  = false;
+
+    public bool PlayerIsChased  {get {return this.playerIsChased;}set {this.playerIsChased = value;}}
+
+
+    private bool pickedUpTutKey = false;
+    public bool PickedUpTutKey{
+        get { return pickedUpTutKey;}
+        set {
+            if (pickedUpRedKey && pickedUpGreenKey && pickedUpBlueKey)
+            {
+                this.doorUnlocked = true;
+            }
+        }
+    }
+    private bool pickedUpRedKey = false;
+    public bool PickedUpRedKey{
+        get { return pickedUpRedKey;}
+        set {
+            if (pickedUpTutKey && pickedUpGreenKey && pickedUpBlueKey)
+            {
+                this.doorUnlocked = true;
+            }
+        }
+    }
+    private bool pickedUpGreenKey = false;
+    public bool PickedUpGreenKey{
+        get { return pickedUpGreenKey;}
+        set {
+            if (pickedUpTutKey && pickedUpRedKey && pickedUpBlueKey)
+            {
+                this.doorUnlocked = true;
+            }
+        }
+    }
+    private bool pickedUpBlueKey = false;
+    public bool PickedUpBlueKey{
+        get { return pickedUpBlueKey;}
+        set {
+            if (pickedUpTutKey && pickedUpRedKey && pickedUpGreenKey)
+            {
+                this.doorUnlocked = true;
+            }
+        }
+    }
+    private bool doorUnlocked = false;
+    public bool DoorUnlocked {
+        get { return this.doorUnlocked; }
+    }
 
     private void Awake()
     {

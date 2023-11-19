@@ -31,7 +31,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Pause()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         UIToggel.SetActive(true);
     }
     public void UnPause()
