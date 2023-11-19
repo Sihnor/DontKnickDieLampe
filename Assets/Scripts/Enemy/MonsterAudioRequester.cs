@@ -10,12 +10,12 @@ public class MonsterAudioRequester : MonoBehaviour
     [SerializeField]
     private AudioData monsterSounds;
 
-    void Update()
+    private void Update()
     {
-        if (Time.frameCount % 200 == 0)
+        if (Time.frameCount % 720 == 0)
         {
-            requests.Add(SoundRequest.Request(monsterSounds));
-
+            requests.Add(SoundRequest.Request(false, monsterSounds));
         }
     }
+
 }

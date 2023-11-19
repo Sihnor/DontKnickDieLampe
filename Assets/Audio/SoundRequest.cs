@@ -16,8 +16,8 @@ public class SoundRequest
         Position = _position;
     }
 
-    public static SoundRequest Request(AudioData _sound)
+    public static SoundRequest Request(bool is2D, AudioData _sound)
     {
-        return new SoundRequest(true, Vector3.zero, _sound);
+        return new SoundRequest(is2D, Vector3.zero, _sound);
     }
 }
