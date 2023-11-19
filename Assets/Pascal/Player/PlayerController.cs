@@ -27,6 +27,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float sensiY = 0.1f;
     [SerializeField] int clampValue = 225;
 
+
+    [SerializeField] float sinTime = 0f;
+    [SerializeField] float sinOffset = 0.1f;
+    [SerializeField] float sinFrequenz = 0.1f;
+    [SerializeField] float sinAmplitude = 0.1f;
+
     Vector2 moveInput;
     Vector3 direction;
     Vector2 mouseInput;
@@ -55,7 +61,7 @@ public class PlayerController : MonoBehaviour
             curSprintTime -= sprintTimeDecrease * Time.deltaTime;
         }
 
-        if(curSprintTime < 0)
+        if (curSprintTime < 0)
         {
             curSprintTime = 0;
             onCooldown = false;
