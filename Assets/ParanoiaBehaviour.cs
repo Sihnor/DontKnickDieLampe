@@ -11,6 +11,11 @@ public class ParanoiaBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance)
+        {
+            return;
+        }
+        
         if (GameManager.Instance.lightingOn)
         {
             RehabTickUpdate();
