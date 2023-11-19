@@ -24,6 +24,9 @@ public class AnimationManager : MonoBehaviour
 
     [SerializeField] private Animator TutLockAnimation;
     [SerializeField] private GameObject TutLock;
+    [SerializeField] private GameObject EnemyOne;
+    [SerializeField] private GameObject EnemyTwo;
+    [SerializeField] private GameObject Light;
     
     public void StartUnlockAnimation()
     {
@@ -87,11 +90,6 @@ public class AnimationManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        throw new NotImplementedException();
-    }
-
     private void Update()
     {
         if (!this.IsDoorOpen && this.IsExitPlaying)
@@ -103,5 +101,8 @@ public class AnimationManager : MonoBehaviour
     private void DisableLock()
     {
         this.TutLock.SetActive(false);
+        this.EnemyOne.SetActive(true);
+        this.EnemyTwo.SetActive(true);
+        this.Light.SetActive(false);
     }
 }
