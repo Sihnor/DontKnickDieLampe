@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb634f804b051d54e92b4bf1753d20f2, type: 3}
-  m_Name: monsterAudio
+  m_Name: MonsterA
   m_EditorClassIdentifier: 
   volume: 1
   clips:
-  - {fileID: 8300000, guid: ba1935aaf1267194b8afff08b2fe751d, type: 3}
-  - {fileID: 8300000, guid: 1633bbf2aa3ef6247915222ab3c7f76e, type: 3}
-  - {fileID: 8300000, guid: 6097fff6ae95b114d9334a86836698a6, type: 3}
+  - {fileID: 8300000, guid: ff3c6c46f27e5e647a71f266d5fd48e5, type: 3}
