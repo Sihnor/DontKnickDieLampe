@@ -31,7 +31,7 @@ public class PlayerPicUp : MonoBehaviour
             infoText.gameObject.SetActive(false);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.lightingOn)
         {
             if (hit.collider == null)
             {
