@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput.x != 0 || moveInput.y != 0)
         {
-            if (Time.frameCount % 90 == 0)
+            if (Time.frameCount % 180 == 0)
             {
                 requests.Add(SoundRequest.Request(true, footSteps));
             }

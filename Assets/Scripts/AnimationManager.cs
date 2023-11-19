@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
@@ -13,15 +14,24 @@ public class AnimationManager : MonoBehaviour
     private bool IsPointOneReached = false;
     [SerializeField] private Transform PointTwo;
 
+    [SerializeField]
+    private SoundRequestCollection requests;
+    [SerializeField]
+    private AudioData lockAudio;
+
     private bool IsDoorOpen = false;
     private bool IsExitPlaying = false;
 
     [SerializeField] private Animator TutLockAnimation;
     [SerializeField] private GameObject TutLock;
+    [SerializeField] private GameObject EnemyOne;
+    [SerializeField] private GameObject EnemyTwo;
+    [SerializeField] private GameObject Light;
     
     public void StartUnlockAnimation()
     {
         this.TutLockAnimation.SetBool("PlayUnlockAnimation", true);
+        requests.Add(SoundRequest.Request(true, lockAudio));
         Invoke("DisableLock", 10f);
     }
 
@@ -80,11 +90,6 @@ public class AnimationManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        throw new NotImplementedException();
-    }
-
     private void Update()
     {
         if (!this.IsDoorOpen && this.IsExitPlaying)
@@ -96,5 +101,8 @@ public class AnimationManager : MonoBehaviour
     private void DisableLock()
     {
         this.TutLock.SetActive(false);
+        this.EnemyOne.SetActive(true);
+        this.EnemyTwo.SetActive(true);
+        this.Light.SetActive(false);
     }
 }
