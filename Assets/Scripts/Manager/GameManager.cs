@@ -74,4 +74,13 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(this);
     }
+    
+    private void OnLevelWasLoaded(int _level)
+    {
+        if (_level == 2)
+        {
+            SpawnManager.Instance.SpawnPlayer();
+            SpawnManager.Instance.SpawnKeys();
+        }
+    }
 }

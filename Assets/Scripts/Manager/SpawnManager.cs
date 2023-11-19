@@ -24,12 +24,6 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] public List<GameObject> keySpawnPoints;
     public System.Random rnd = new System.Random();
 
-    private void Start()
-    {
-        SpawnKeys();
-        SpawnPlayer();
-    }
-
     public void SpawnPlayer()
     {
         int tempIndex = rnd.Next(0,playerSpawnPoints.Count);
