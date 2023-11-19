@@ -16,16 +16,13 @@ public class AnimationManager : MonoBehaviour
     private bool IsDoorOpen = false;
     private bool IsExitPlaying = false;
 
-    public void OpenDoorAnimation()
-    {
-    }
-
-    public void CloseDoorAnimation()
-    {
-    }
-
+    [SerializeField] private Animator TutLockAnimation;
+    [SerializeField] private GameObject TutLock;
+    
     public void StartUnlockAnimation()
     {
+        this.TutLockAnimation.SetBool("PlayUnlockAnimation", true);
+        Invoke("DisableLock", 10f);
     }
 
     public void StartExitAnimation()
@@ -94,5 +91,10 @@ public class AnimationManager : MonoBehaviour
         {
             StartExitAnimation();
         }
+    }
+
+    private void DisableLock()
+    {
+        this.TutLock.SetActive(false);
     }
 }

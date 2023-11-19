@@ -1053,6 +1053,8 @@ MonoBehaviour:
   PlayerTransForm: {fileID: 1995157126}
   PointOne: {fileID: 1073045151}
   PointTwo: {fileID: 1073045150}
+  TutLockAnimation: {fileID: 986401859}
+  TutLock: {fileID: 986401857}
 --- !u!1 &298147575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4033,7 +4035,6 @@ MonoBehaviour:
   xSensitivity: 0.1
   ySensitivity: 0.1
   lightingOn: 0
-  doorUnlocked: 0
 --- !u!1 &737369454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4346,6 +4347,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5173498413826253888, guid: 3d55d03be2cd5be4d93a21bae97e8027, type: 3}
+--- !u!1 &986401857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7146729414535257046, guid: 77aad6cad746dc5d190c513c7d918400,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073045149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &986401859 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 212269690059215591, guid: 77aad6cad746dc5d190c513c7d918400,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073045149}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1005412321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,6 +4597,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3644623547353655376, guid: 77aad6cad746dc5d190c513c7d918400,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644623547353655376, guid: 77aad6cad746dc5d190c513c7d918400,
+        type: 3}
+      propertyPath: m_TagString
+      value: TutKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261392238432396405, guid: 77aad6cad746dc5d190c513c7d918400,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.432
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261392238432396405, guid: 77aad6cad746dc5d190c513c7d918400,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.847
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554854763880640234, guid: 77aad6cad746dc5d190c513c7d918400,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4598691226729966219, guid: 77aad6cad746dc5d190c513c7d918400,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4664,6 +4702,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EscapeDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 5745387439386562560, guid: 77aad6cad746dc5d190c513c7d918400,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745387439386562560, guid: 77aad6cad746dc5d190c513c7d918400,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5882014401894706656, guid: 77aad6cad746dc5d190c513c7d918400,
         type: 3}
       propertyPath: m_Layer
@@ -4673,6 +4721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740804862707687862, guid: 77aad6cad746dc5d190c513c7d918400,
+        type: 3}
+      propertyPath: m_TagString
+      value: TutKey
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
