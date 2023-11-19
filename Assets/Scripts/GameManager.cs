@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    private bool doorUnlocked = false;
+    public bool doorUnlocked = false;
     public bool DoorUnlocked {
         get { return this.doorUnlocked; }
     }

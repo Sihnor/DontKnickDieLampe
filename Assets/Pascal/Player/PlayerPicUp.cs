@@ -63,6 +63,7 @@ public class PlayerPicUp : MonoBehaviour
             {
                 GameManager.Instance.PickedUpTutKey = true;
                 hit.collider.gameObject.SetActive(false);
+                AnimationManager.Instance.StartUnlockAnimation();
                 return;
             }
             if (hit.collider.CompareTag("EscapeDoor"))
@@ -70,7 +71,7 @@ public class PlayerPicUp : MonoBehaviour
                 if (GameManager.Instance.DoorUnlocked)
                 {
                     Debug.Log("Die Tuer ist offen");
-                    //AnimationManager.Instance.PlayEndAnimation();
+                    AnimationManager.Instance.StartExitAnimation();
                     return;
                 }
             }
