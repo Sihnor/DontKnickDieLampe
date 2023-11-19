@@ -18,6 +18,14 @@ public class MenuManager : MonoBehaviour
         Instance = this;
     }
 
+    private void OnLevelWasLoaded(int _level)
+    {
+        if (_level == 2)
+        {
+            SpawnManager.Instance.SpawnPlayer();
+            SpawnManager.Instance.SpawnKeys();
+        }
+    }
     #region MainMenu
     public void OnStart()
     {

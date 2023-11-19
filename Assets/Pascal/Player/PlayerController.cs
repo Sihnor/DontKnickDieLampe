@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float sprintSpeedToAdd = 5;
     [SerializeField] float speed = 10;
+
+    [SerializeField] private int health = 3;
+
+    [SerializeField]
+    private SoundRequestCollection requests;
+    [SerializeField]
+    private AudioData footSteps;
 
     [SerializeField] float sprintTime = 10;
     [SerializeField] float sprintTimeIncrease = 1;
@@ -21,6 +29,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float sensiX = 0.1f;
     [SerializeField] float sensiY = 0.1f;
     [SerializeField] int clampValue = 225;
+
+
+    [SerializeField] float sinTime = 0f;
+    [SerializeField] float sinOffset = 0.1f;
+    [SerializeField] float sinFrequenz = 0.1f;
+    [SerializeField] float sinAmplitude = 0.1f;
 
     Vector2 moveInput;
     Vector3 direction;
@@ -39,6 +53,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (health == 0)
+        {
+            SceneManager.LoadScene(3);
+            return;
+        }
         if (curSprintTime < sprintTime && sprintInput == 1 && !onCooldown)
         {
             curSprintTime += sprintTimeIncrease * Time.deltaTime;
@@ -50,15 +69,38 @@ public class PlayerController : MonoBehaviour
             curSprintTime -= sprintTimeDecrease * Time.deltaTime;
         }
 
-        if(curSprintTime < 0)
+        if (curSprintTime < 0)
         {
             curSprintTime = 0;
             onCooldown = false;
         }
+
+        if (moveInput.x != 0 || moveInput.y != 0)
+        {
+            if (Time.frameCount % 90 == 0)
+            {
+                requests.Add(SoundRequest.Request(true, footSteps));
+            }
+            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + sinAmplitude * (Mathf.Sin(sinFrequenz * sinTime) + sinOffset), cam.transform.position.z);
+            sinTime += 1f * Time.deltaTime;
+        }
+
         direction = moveInput.x * transform.right + moveInput.y * transform.forward;
         rb.AddForce(direction * (speed + (sprintSpeedToAdd * sprintInput)) * Time.deltaTime * 100);
         transform.rotation = Quaternion.Euler(rotationVecPlayer * sensiX);
         cam.transform.rotation = Quaternion.Euler(new Vector3(rotationVecCam.x, rotationVecPlayer.y, 0) * sensiY);
+    }
+    public int getHealth()
+    {
+        return health;
+    }
+    public void dealDamage(int _damage)
+    {
+        health -= _damage;
+        if (health < 0)
+        {
+            health = 0;
+        }
     }
 
     public void OnMoveInput(InputAction.CallbackContext _input)

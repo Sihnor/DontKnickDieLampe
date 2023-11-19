@@ -10,6 +10,7 @@ TagManager:
   - BlueKey
   - GreenKey
   - TutKey
+  - Manager
   layers:
   - Default
   - TransparentFX
