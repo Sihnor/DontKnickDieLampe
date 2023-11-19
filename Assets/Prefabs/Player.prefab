@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee056d02b4287144bf2bdbe12c846bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requests: {fileID: 0}
-  thanos: {fileID: 0}
+  requests: {fileID: 11400000, guid: 3eedd24e96da0414096363e02ede720a, type: 2}
+  thanos: {fileID: 11400000, guid: 71d1e4f2316473249a437d3cfb36018e, type: 2}
   sonarSpeed: 10
   sonarRadius: 20
   canSonar: 0
@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee056d02b4287144bf2bdbe12c846bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requests: {fileID: 0}
-  thanos: {fileID: 0}
+  requests: {fileID: 11400000, guid: 3eedd24e96da0414096363e02ede720a, type: 2}
+  thanos: {fileID: 11400000, guid: 71d1e4f2316473249a437d3cfb36018e, type: 2}
   sonarSpeed: 10
   sonarRadius: 20
   canSonar: 0
@@ -357,8 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee056d02b4287144bf2bdbe12c846bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requests: {fileID: 0}
-  thanos: {fileID: 0}
+  requests: {fileID: 11400000, guid: 3eedd24e96da0414096363e02ede720a, type: 2}
+  thanos: {fileID: 11400000, guid: 71d1e4f2316473249a437d3cfb36018e, type: 2}
   sonarSpeed: 10
   sonarRadius: 20
   canSonar: 0
@@ -694,6 +694,7 @@ MonoBehaviour:
   BlueKey: {fileID: 11400000, guid: dd0bd06ed2516eb43a94070502b6c3bd, type: 2}
   GreenKey: {fileID: 11400000, guid: 562680e61a7a6614da06434cbf06d5d3, type: 2}
   TutKey: {fileID: 11400000, guid: db3172931a1c7d24b938fa286895220e, type: 2}
+  TheDoorLogic: {fileID: 0}
 --- !u!114 &-14878780111680007
 MonoBehaviour:
   m_ObjectHideFlags: 0
