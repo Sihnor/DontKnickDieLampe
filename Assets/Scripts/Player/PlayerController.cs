@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         sensiY = GameManager.Instance.ySensitivity;
         rb = GetComponent<Rigidbody>();
         cam = gameObject.transform.GetChild(0).gameObject;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
