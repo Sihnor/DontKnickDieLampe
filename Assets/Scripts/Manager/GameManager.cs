@@ -22,13 +22,16 @@ public class GameManager : MonoBehaviour
     private bool pickedUpTutKey = false;
     public bool PickedUpTutKey{
         get { return pickedUpTutKey;}
-        set {
+        set
+        {
+            this.pickedUpTutKey = value;
             if (pickedUpRedKey && pickedUpGreenKey && pickedUpBlueKey)
             {
                 this.doorUnlocked = true;
             }
         }
     }
+    
     private bool pickedUpRedKey = false;
     public bool PickedUpRedKey{
         get { return pickedUpRedKey;}
@@ -41,6 +44,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    
     private bool pickedUpGreenKey = false;
     public bool PickedUpGreenKey{
         get { return pickedUpGreenKey;}
@@ -53,6 +57,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    
     private bool pickedUpBlueKey = false;
     public bool PickedUpBlueKey{
         get { return pickedUpBlueKey;}
@@ -65,6 +70,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    
     private bool doorUnlocked = false;
     public bool DoorUnlocked {
         get { return this.doorUnlocked; }
