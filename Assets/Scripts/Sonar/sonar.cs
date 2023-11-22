@@ -40,7 +40,7 @@ public class sonar : MonoBehaviour
             RaycastHit hit;
 
             // Cast a ray to detect objects
-            if (Physics.Raycast(startPosition, direction, out hit, sonarRadius))//, detectionLayer))
+            if (Physics.Raycast(startPosition, direction, out hit, sonarRadius, detectionLayer))
             {
                 Debug.Log("Etwas wurde gefunden");
                 // Object detected, handle the detection (outline or other effects)

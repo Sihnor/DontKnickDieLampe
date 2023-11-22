@@ -100,7 +100,6 @@ public class Outline : MonoBehaviour {
   }
 
   void OnEnable() {
-    Debug.Log("Hallo Das ist der Outline");
     foreach (var renderer in renderers) {
 
       // Append outline shaders
