@@ -27,7 +27,6 @@ public class sonar : MonoBehaviour
     void EmitSonarWaves()
     {
         float step = sonarSpeed * Time.deltaTime;
-
         // Emit sonar waves in a circular pattern
         for (float angle = 0; angle < 360; angle += step)
         {
@@ -41,8 +40,9 @@ public class sonar : MonoBehaviour
             RaycastHit hit;
 
             // Cast a ray to detect objects
-            if (Physics.Raycast(startPosition, direction, out hit, sonarRadius, detectionLayer))
+            if (Physics.Raycast(startPosition, direction, out hit, sonarRadius))//, detectionLayer))
             {
+                Debug.Log("Etwas wurde gefunden");
                 // Object detected, handle the detection (outline or other effects)
                 OnObjectDetected(hit.collider.gameObject);
             }
@@ -53,6 +53,10 @@ public class sonar : MonoBehaviour
     {
         // Implement the logic to handle the detected object
         // For example, you can trigger an outline effect on the detected object
+        if (!detectedObject)
+        {
+            return;
+        }
         detectedObject.GetComponent<Outline>().enabled = true;
     }
 
